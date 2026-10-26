@@ -1,0 +1,2 @@
+Gambar galeri: galeri1, galeri2, galeri3, galeri4
+Ekstensi bebas (.jpg / .jpeg / .png / .webp)

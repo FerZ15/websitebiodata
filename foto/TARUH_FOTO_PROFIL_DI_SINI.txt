@@ -1,0 +1,2 @@
+Foto profil dan foto menu depan: foto1, foto2, foto3, foto4
+Ekstensi bebas (.jpg / .jpeg / .png / .webp)
