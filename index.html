@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biodata – Ahmad Ferdian</title>
+<meta name="theme-color" content="#0a2fa8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="motion.css">
+<script>try{if(sessionStorage.getItem('tr'))document.documentElement.className='tr';else if(!sessionStorage.getItem('entered'))document.documentElement.className='gate'}catch(e){}</script>
+<link rel="prefetch" href="profil.html">
+<link rel="prefetch" href="proyek.html">
+<link rel="prefetch" href="keahlian.html">
+<link rel="prefetch" href="kontak.html">
+<link rel="prefetch" href="kesan.html">
+</head>
+<body data-page="home">
+<div class="water" id="water" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="hud"><div class="date"><span id="tgl">10/21</span> <span id="hari">Rabu</span></div><div class="hudr"><button class="snd" id="anm" aria-pressed="true">Animasi: nyala</button><button class="snd" id="snd" aria-pressed="true">Suara: nyala</button><button class="snd mus" id="mus" aria-pressed="true" aria-label="Nyalakan atau matikan musik"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="mt">Musik: nyala</span></button><button class="snd nxt" id="nxt" aria-label="Lagu berikutnya" hidden>&#9197;</button><input class="vol snd" id="vol" type="range" min="0" max="100" value="60" aria-label="Volume musik"></div></div>
+<div id="start" role="button" tabindex="0" aria-label="Klik atau tekan tombol apa saja untuk masuk">
+  <div class="sti">
+    <span class="rank">Selamat datang</span>
+    <div class="stt">Biodata</div>
+    <div class="stn">Ahmad Ferdian</div>
+    <p class="stp">Klik atau tekan tombol apa saja</p>
+    <p class="sts">Nyalakan suara untuk pengalaman terbaik</p>
+  </div>
+</div>
+<div class="home enter" id="home">
+  <div class="ghost" aria-hidden="true">MENU</div>
+  <div class="wheel" aria-hidden="true"></div>
+  <div class="hero" aria-hidden="true"><img class="on" src="foto/foto1.jpg" alt=""><img src="foto/foto2.jpg" alt=""><img src="foto/foto3.jpg" alt=""><img src="foto/foto4.jpg" alt=""><img src="foto/foto5.jpg" alt=""></div>
+  <nav id="menu" aria-label="Menu utama">
+    <a class="it" href="profil.html" data-v="profil">Profil</a>
+    <a class="it" href="proyek.html" data-v="proyek">Proyek</a>
+    <a class="it" href="keahlian.html" data-v="keahlian">Keahlian</a>
+    <a class="it" href="kesan.html" data-v="kesan">Kesan</a>
+    <a class="it" href="kontak.html" data-v="kontak">Kontak</a>
+  </nav>
+  <p id="desc">Lihat profil saya</p>
+</div>
+<div class="keys"><button id="kA"><b>A</b><span id="kAt">Buka</span></button><button id="kB"><b>B</b><span>Kembali</span></button></div>
+<div id="iris" aria-hidden="true"><span id="lbl" class="big"></span></div>
+<div id="slabs" aria-hidden="true">
+  <div class="slab r"></div><div class="slab w"></div><div class="slab n"><span id="lbl2" class="big"></span></div>
+</div>
+<div id="toast" class="off" aria-live="polite"></div>
+<script src="air.js"></script>
+<script src="script.js"></script>
+<script src="motion.js"></script>
+<script src="playlist.js"></script>
+<script src="musik.js"></script>
+</body>
+</html>

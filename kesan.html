@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kesan &amp; Pesan – Ahmad Ferdian</title>
+<meta name="theme-color" content="#0a2fa8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="motion.css">
+<script>try{if(sessionStorage.getItem('tr'))document.documentElement.className='tr'}catch(e){}</script>
+<link rel="prefetch" href="index.html">
+</head>
+<body data-page="kesan">
+<div class="water" id="water" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="hud"><div class="date"><span id="tgl">10/21</span> <span id="hari">Rabu</span></div><div class="hudr"><button class="snd" id="anm" aria-pressed="true">Animasi: nyala</button><button class="snd" id="snd" aria-pressed="true">Suara: nyala</button><button class="snd mus" id="mus" aria-pressed="true" aria-label="Nyalakan atau matikan musik"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="mt">Musik: nyala</span></button><button class="snd nxt" id="nxt" aria-label="Lagu berikutnya" hidden>&#9197;</button><input class="vol snd" id="vol" type="range" min="0" max="100" value="60" aria-label="Volume musik"></div></div>
+<section class="view" id="view" aria-live="polite">
+  <div class="gt" id="gt" aria-hidden="true">Kesan</div>
+  <div class="tabs"><button id="tL" aria-label="Bagian sebelumnya">L</button><span id="tname">Kesan &amp; Pesan</span><button id="tR" aria-label="Bagian berikutnya">R</button></div>
+  <div class="body">
+    <div class="pn" id="p-kesan">
+      <h2 class="st">Kesan &amp; <em>Pesan</em></h2>
+      <div class="kp">
+        <!-- ===== KELOMPOK KESAN: ganti judul (<h4>) dan teks (<p>) di tiap kotak ===== -->
+        <section class="grp">
+          <h3 class="gh st">Kesan</h3>
+          <article class="card st"><h4>Judul kesan 1</h4><p>Tulis isi kesan pertama di sini. Ganti judul di atas dan paragraf ini dengan teks Anda.</p></article>
+          <article class="card st"><h4>Judul kesan 2</h4><p>Tulis isi kesan kedua di sini. Ganti judul di atas dan paragraf ini dengan teks Anda.</p></article>
+        </section>
+        <!-- ===== KELOMPOK PESAN: ganti judul (<h4>) dan teks (<p>) di tiap kotak ===== -->
+        <section class="grp pesan">
+          <h3 class="gh st">Pesan</h3>
+          <article class="card st"><h4>Judul pesan 1</h4><p>Tulis isi pesan pertama di sini. Ganti judul di atas dan paragraf ini dengan teks Anda.</p></article>
+          <article class="card st"><h4>Judul pesan 2</h4><p>Tulis isi pesan kedua di sini. Ganti judul di atas dan paragraf ini dengan teks Anda.</p></article>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="keys"><button id="kA"><b>A</b><span id="kAt">Buka</span></button><button id="kB"><b>B</b><span>Kembali</span></button></div>
+<div id="iris" aria-hidden="true"><span id="lbl" class="big"></span></div>
+<div id="slabs" aria-hidden="true">
+  <div class="slab r"></div><div class="slab w"></div><div class="slab n"><span id="lbl2" class="big"></span></div>
+</div>
+<div id="toast" class="off" aria-live="polite"></div>
+<script src="air.js"></script>
+<script src="script.js"></script>
+<script src="motion.js"></script>
+<script src="playlist.js"></script>
+<script src="musik.js"></script>
+</body>
+</html>

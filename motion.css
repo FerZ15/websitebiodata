@@ -1,0 +1,34 @@
+/* motion.css - lapisan gerak tambahan ala menu P3R (dimuat setelah style.css) */
+/* menu roda: tiap item bergerak bergelombang (item jauh menyusul sedikit lebih lambat), lantas memantul */
+.it{transition:translate .65s cubic-bezier(.34,1.56,.64,1) calc(var(--ad,0)*30ms),scale .65s cubic-bezier(.34,1.56,.64,1) calc(var(--ad,0)*30ms),opacity .35s,color .25s}
+.it::before{transition:transform .4s cubic-bezier(.2,1.25,.3,1)}
+.it::after{transition:transform .46s cubic-bezier(.2,1.25,.3,1) .06s}
+.it.jolt{animation:itJolt .65s cubic-bezier(.2,1.3,.4,1)}
+@keyframes itJolt{0%{transform:skewX(-12deg) translateX(-26px) scaleX(.9)}40%{transform:skewX(-20deg) translateX(12px) scaleX(1.07)}70%{transform:skewX(-9deg) translateX(-3px)}100%{transform:skewX(-12deg)}}
+/* baris daftar (Proyek) */
+.row{transition:background .15s,color .15s,translate .45s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.row.jolt{animation:rowJolt .55s cubic-bezier(.2,1.3,.4,1)}
+@keyframes rowJolt{0%{transform:translateX(-30px) scaleX(.95)}50%{transform:translateX(9px) scaleX(1.02)}100%{transform:none}}
+/* teks yang berganti (deskripsi menu, detail proyek, judul tab) meluncur masuk, tidak muncul tiba-tiba */
+.swap{animation:swap .5s cubic-bezier(.2,1,.3,1)}
+@keyframes swap{from{opacity:0;transform:translateX(46px) skewX(-8deg)}60%{opacity:1;transform:translateX(-5px) skewX(1.5deg)}}
+/* isi halaman: selang-seling dari kanan dan kiri, dengan pantulan */
+.view.enter .st:nth-child(even){animation-name:upL}
+@keyframes upL{from{opacity:0;transform:translateX(-90px) skewX(10deg)}60%{opacity:1;transform:translateX(8px) skewX(-2deg)}}
+/* umpan balik sentuh */
+.row:active,.box:active,.card:active,.gi:active,.mail:active,.keys button:active,.tabs button:active{scale:.94}
+.keys b,.tabs span{transition:scale .25s cubic-bezier(.34,1.56,.64,1)}
+.keys button:hover b{scale:1.18}
+
+/* kartu arcana gontai: berayun seperti menggantung, lalu berayun lebih besar tiap kartu berganti */
+.pic{transform-origin:50% -6%;animation:gontai 3.6s ease-in-out infinite alternate}
+@keyframes gontai{from{rotate:1deg}to{rotate:7deg}}
+.pic.swing{animation:swing 1.3s cubic-bezier(.3,.6,.3,1),gontai 3.6s ease-in-out 1.3s infinite alternate}
+@keyframes swing{0%{rotate:4deg}18%{rotate:13deg}40%{rotate:-4deg}62%{rotate:8.5deg}82%{rotate:2deg}100%{rotate:4deg}}
+
+/* scroll merah ala menu P3R: jalur miring + kepala merah yang meluncur dan melar mengikuti gerakan */
+.view{scrollbar-width:none}.view::-webkit-scrollbar{display:none}
+#sb{position:fixed;z-index:8;right:.55rem;top:calc(7rem + env(safe-area-inset-top,0px));bottom:5.2rem;width:.75rem;pointer-events:none;opacity:0;transition:opacity .4s}
+#sb.on{opacity:1}
+#sb::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.28);transform:skewX(-14deg)}
+#sb i{position:absolute;left:0;right:0;top:0;background:var(--red);transform:skewX(-14deg);box-shadow:0 0 0 2px #fff,0 0 14px rgba(232,17,45,.85);will-change:transform}
